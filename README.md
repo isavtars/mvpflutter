@@ -1,16 +1,7 @@
-# mvpflutter
+The model is an interface defining the data to be displayed or otherwise acted upon in the user interface.
 
-A new Flutter project.
+The view is a passive interface that displays data (the model) and routes user commands (events) to the presenter to act upon that data.
 
-## Getting Started
+The presenter acts upon the model and the view. It retrieves data from repositories (the model), and formats it for display in the view
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+So in the MVP pattern, the presenter is the middle mediator handling the model and updating the view. In MVP View and Presenter are completely decoupled and communicate each other by the interfaces. Because of decoupling of MVP that is easy to mock data for unit testing.
